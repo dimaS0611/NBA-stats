@@ -50,7 +50,7 @@ struct StatsTable<RowContent: View, Data: Identifiable>: View {
       HStack {
         ForEach(headers, id: \.self) { header in
           Text(header)
-            .frame(width: UIScreen.main.bounds.width / CGFloat(headers.count))
+            .frame(maxWidth: UIScreen.main.bounds.width / CGFloat(headers.count))
         }
       }
 

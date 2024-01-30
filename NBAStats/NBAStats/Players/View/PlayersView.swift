@@ -18,7 +18,9 @@ struct PlayersView: View {
   var body: some View {
     NavigationStack {
       StatsTable(data: $viewModel.players,
-                 headers: ["First Name", "Last Name", "Team"], { player in
+                 headers: [String(localized: "First Name", table: "Localizable"),
+                           String(localized: "Last Name", table: "Localizable"),
+                           String(localized: "Team", table: "Localizable")], { player in
         playerView(player)
       }, loadMore: {
         viewModel.load()

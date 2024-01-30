@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8A29AFF12B680517005EFCCE /* NBAStatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29AFF02B680517005EFCCE /* NBAStatsApp.swift */; };
-		8A29AFF32B680517005EFCCE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29AFF22B680517005EFCCE /* ContentView.swift */; };
 		8A29AFF52B680518005EFCCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A29AFF42B680518005EFCCE /* Assets.xcassets */; };
 		8A29AFF82B680518005EFCCE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A29AFF72B680518005EFCCE /* Preview Assets.xcassets */; };
 		8A29B0002B6805C1005EFCCE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8A29AFFF2B6805C1005EFCCE /* Alamofire */; };
@@ -28,12 +27,12 @@
 		8ADCC6D22B69484800345CEE /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCC6D12B69484800345CEE /* Players.swift */; };
 		8ADCC6D52B694AD200345CEE /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCC6D42B694AD200345CEE /* PlayersView.swift */; };
 		8ADCC6D72B694DEA00345CEE /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCC6D62B694DEA00345CEE /* TabsView.swift */; };
+		8ADCC6D92B69536700345CEE /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8ADCC6D82B69536700345CEE /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8A29AFED2B680517005EFCCE /* NBAStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A29AFF02B680517005EFCCE /* NBAStatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBAStatsApp.swift; sourceTree = "<group>"; };
-		8A29AFF22B680517005EFCCE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8A29AFF42B680518005EFCCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A29AFF72B680518005EFCCE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8A29B0042B6806DA005EFCCE /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		8ADCC6D12B69484800345CEE /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		8ADCC6D42B694AD200345CEE /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
 		8ADCC6D62B694DEA00345CEE /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		8ADCC6D82B69536700345CEE /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +91,8 @@
 				8ADCC6CA2B69477700345CEE /* Players */,
 				8A29B0032B6806A2005EFCCE /* Network */,
 				8ADCC6C62B69419600345CEE /* NBAStatsKit */,
-				8A29AFF22B680517005EFCCE /* ContentView.swift */,
 				8A29AFF42B680518005EFCCE /* Assets.xcassets */,
+				8ADCC6D82B69536700345CEE /* Localizable.xcstrings */,
 				8A29AFF62B680518005EFCCE /* Preview Content */,
 			);
 			path = NBAStats;
@@ -306,6 +306,8 @@
 			knownRegions = (
 				en,
 				Base,
+				lt,
+				be,
 			);
 			mainGroup = 8A29AFE42B680517005EFCCE;
 			packageReferences = (
@@ -327,6 +329,7 @@
 			files = (
 				8A29AFF82B680518005EFCCE /* Preview Assets.xcassets in Resources */,
 				8A29AFF52B680518005EFCCE /* Assets.xcassets in Resources */,
+				8ADCC6D92B69536700345CEE /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +344,6 @@
 				8ADCC6CF2B6947FA00345CEE /* PlayersNetworkManager.swift in Sources */,
 				8A29B00E2B6809EF005EFCCE /* Teams.swift in Sources */,
 				8A29B0082B68077D005EFCCE /* NetworkManager.swift in Sources */,
-				8A29AFF32B680517005EFCCE /* ContentView.swift in Sources */,
 				8ADCC6C92B6941AD00345CEE /* StatsTable.swift in Sources */,
 				8ADCC6D72B694DEA00345CEE /* TabsView.swift in Sources */,
 				8A29B0132B680CC0005EFCCE /* HomeViewModel.swift in Sources */,

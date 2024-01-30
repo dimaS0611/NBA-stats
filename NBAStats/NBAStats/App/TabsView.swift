@@ -36,3 +36,7 @@ struct TabsView: View {
     PlayersView(viewModel: viewModel)
   }
 }
+
+#Preview {
+  TabsView()
+}

@@ -17,7 +17,9 @@ struct HomeView: View {
   var body: some View {
     NavigationStack {
       StatsTable(data: $viewModel.teams,
-                 headers: ["Name", "City", "Conference"]) { team in
+                 headers: [String(localized: "Name", table: "Localizable"),
+                           String(localized: "City", table: "Localizable"),
+                           String(localized: "Conference", table: "Localizable")]) { team in
         teamView(team)
       }
       .navigationTitle("Home")

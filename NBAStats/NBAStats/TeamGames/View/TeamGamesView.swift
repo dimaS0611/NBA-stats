@@ -16,10 +16,10 @@ struct TeamGamesView: View {
   
   var body: some View {
     StatsTable(data: $viewModel.games,
-               headers: ["Home\nName",
-                         "Home\nScore",
-                         "Visitor\nName",
-                         "Visitor\nScore"], { game in
+               headers: [String(localized: "Home\nName", table: "Localizable"),
+                         String(localized: "Home\nScore", table: "Localizable"),
+                         String(localized: "Visitor\nName", table: "Localizable"),
+                         String(localized: "Visitor\nScore", table: "Localizable")], { game in
       gameView(game)
     }, loadMore: viewModel.load)
     .navigationTitle(viewModel.team.fullName)
