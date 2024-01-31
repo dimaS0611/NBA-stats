@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
   @StateObject private var viewModel: HomeViewModel
 
+  @State private var showSortSheet: Bool = false
+
   init(viewModel: HomeViewModel) {
     self._viewModel = StateObject(wrappedValue: viewModel)
   }
@@ -23,6 +25,24 @@ struct HomeView: View {
         teamView(team)
       }
       .navigationTitle("Home")
+      .toolbar {
+        ToolbarItem(placement: .topBarTrailing) {
+          Button(action: {
+            showSortSheet = true
+          }, label: {
+            Text(viewModel.sortOrder.title)
+              .foregroundStyle(Color.primary)
+              .padding(.horizontal)
+              .padding(.vertical, 8)
+              .background(.gray.opacity(0.5))
+              .clipShape(Capsule())
+          })
+        }
+      }
+      .sheet(isPresented: $showSortSheet) {
+        sortSheet
+          .presentationDetents([.height(200)])
+      }
       .navigationDestination(for: Team.self) { team in
         let networkManager = TeamsNetworkManager()
         let viewModel = TeamGamesViewModel(team: team,
@@ -49,6 +69,38 @@ struct HomeView: View {
     }
     .padding(.vertical, 8)
     .tint(.primary)
+  }
+
+  var sortSheet: some View {
+    VStack {
+      Rectangle()
+        .foregroundStyle(.gray)
+        .frame(width: 50, height: 5)
+        .clipShape(Capsule())
+        .padding()
+
+      Spacer()
+
+      ForEach(HomeViewModel.SortOrder.allCases, id: \.title) { option in
+        VStack(alignment: .leading) {
+          Button(action: {
+            viewModel.sortOrder = option
+            showSortSheet = false
+          }, label: {
+            HStack {
+              Text(option.title)
+                .font(.title2)
+                .foregroundStyle(Color.primary)
+                .padding(.horizontal)
+
+              Spacer()
+            }
+          })
+
+          Divider()
+        }
+      }
+    }
   }
 }
 
